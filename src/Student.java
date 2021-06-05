@@ -20,6 +20,7 @@ public class Student {
     public void MoveSub(int index, int i) {
         this.Subjects[5] = this.Subjects[index];
         this.Subjects[index] = this.Subjects[i];
+        this.Subjects[i] = this.Subjects[5];
     }
 
     public String getSubjectsName(int index) {

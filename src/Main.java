@@ -9,21 +9,25 @@ public class Main {
 
         String[] NA = new String[2];
         NA = NameAge.split(" ");
-        Student St = new Student(NA[0], Integer.parseInt(NA[1]));
 
-        System.out.println("Which test would you like to write first?");
-        for (int i = 4; i >= 0; i--) {
-            for (int j = 0; j < i+1; j++) {
-                System.out.println(St.getSubjectsName(j) + " " + j);
+        if (AgeCheck(Integer.parseInt(NA[1]))) {
+
+            Student St = new Student(NA[0], Integer.parseInt(NA[1]));
+
+            System.out.println("Which test would you like to write first?");
+            for (int i = 4; i >= 0; i--) {
+                for (int j = 0; j < i + 1; j++) {
+                    System.out.println(St.getSubjectsName(j) + " " + j);
+                }
+                System.out.println("Write index of subject");
+                int index = scan.nextInt();
+                St.SetSubjectMark(test(index, St), index);
+                St.MoveSub(index, i);
             }
-            System.out.println("Write index of subject");
-            int index = scan.nextInt();
-            St.SetSubjectMark(test(index, St), index);
-            St.MoveSub(index, i);
+            System.out.println("You have done all exams");
+            System.out.println("This is your results");
+            Result(St);
         }
-        System.out.println("You have done all exams");
-        System.out.println("This is your results");
-        Result(St);
 
     }
 
@@ -228,7 +232,7 @@ public class Main {
             System.out.println("    Incorrect");
         }
         System.out.println("    Third question:");
-        System.out.println("        What is a tre?");
+        System.out.println("        What is a tree?");
         System.out.println("    Answers:");
         System.out.println("        1. This is a wood");
         System.out.println("        2. This is the metal");
