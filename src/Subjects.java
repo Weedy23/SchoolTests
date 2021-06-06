@@ -11,10 +11,6 @@ public class Subjects {
         this.mark = mark;
     }
 
-    public void PrintSubName() {
-        System.out.println(this.SubName);
-    }
-
     public String getSubName() {
         return SubName;
     }

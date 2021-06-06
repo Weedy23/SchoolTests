@@ -7,7 +7,7 @@ public class Main {
         System.out.println("Hello, Student, write your Name and Age below");
         String NameAge = scan.nextLine();
 
-        String[] NA = new String[2];
+        String[] NA;
         NA = NameAge.split(" ");
 
         if (AgeCheck(Integer.parseInt(NA[1]))) {
@@ -67,9 +67,9 @@ public class Main {
         return 0;
     }
 
-    public static Integer Math() {
+    public static int Math() {
         Scanner scanner = new Scanner(System.in);
-        Integer mark = 1;
+        int mark = 1;
         int answer;
         System.out.println("Chose correct answer:");
         System.out.println("    First question:");
@@ -114,7 +114,7 @@ public class Main {
 
     public static Integer Russian() {
         Scanner scanner = new Scanner(System.in);
-        Integer mark = 1;
+        int mark = 1;
         int answer;
         System.out.println("Chose correct answer:");
         System.out.println("    First question:");
@@ -159,7 +159,7 @@ public class Main {
 
     public static Integer Social() {
         Scanner scanner = new Scanner(System.in);
-        Integer mark = 1;
+        int mark = 1;
         int answer;
         System.out.println("Chose correct answer:");
         System.out.println("    First question:");
@@ -204,7 +204,7 @@ public class Main {
 
     public static Integer DandT() {
         Scanner scanner = new Scanner(System.in);
-        Integer mark = 1;
+        int mark = 1;
         int answer;
         System.out.println("Chose correct answer:");
         System.out.println("    First question:");
@@ -249,7 +249,7 @@ public class Main {
 
     public static Integer Literature() {
         Scanner scanner = new Scanner(System.in);
-        Integer mark = 1;
+        int mark = 1;
         int answer;
         System.out.println("Chose correct answer:");
         System.out.println("    First question:");
